@@ -175,7 +175,7 @@ function Promise:cancel()
 	local hooks = (self :: any)._cancellationHooks
 	if hooks then
 		for _, hook in ipairs(hooks) do
-			task.spawn(hook)
+			task.spawn(hook :: () -> ())
 		end
 		(self :: any)._cancellationHooks = nil
 	end
