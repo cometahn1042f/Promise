@@ -12,6 +12,7 @@ export type Enumerator = typeof(setmetatable(
 		_abortOnReject: boolean,
 		_isUsingOwnPromise: boolean,
 		_isUsingOwnResolve: boolean,
+		_isUsingOwnThen: boolean,
 		length: number,
 		_remaining: number,
 		_result: { unknown }?,
